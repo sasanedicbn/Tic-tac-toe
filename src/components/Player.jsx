@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 const Player = ({name, symbol}) => {
+    const [isEditing, setIsEditing] = useState(false)
     return(
         <li>
             <span className="player">
