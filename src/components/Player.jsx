@@ -8,10 +8,10 @@ const Player = ({name, symbol}) => {
     return(
         <li>
             <span className="player">
-             <span className="player-name">{name}</span>
+             {isEditing ? <input type="text" required/> : <span className="player-name">{name}</span>}
              <span className="player-symbol">{symbol}</span>
             </span>
-        <button onClick={handleEditClick}>Edit</button>
+          <button onClick={handleEditClick}>Edit</button>
           </li>
     )
 }
