@@ -6,6 +6,9 @@ const Player = ({name, symbol}) => {
     function handleEditClick () {
         setIsEditing((editing) => !editing)
     }
+    function handleChange (event) {
+    setPlayerName(event)
+    }
     return(
         <li>
             <span className="player">
