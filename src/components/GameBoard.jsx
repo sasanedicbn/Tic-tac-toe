@@ -1,5 +1,5 @@
 import { useState } from "react"
-function GameBoard ({onSelect}) {
+function GameBoard ({onSelect, activePlayer}) {
     const initialGameBoard = [
         [null, null, null],
         [null, null, null],
@@ -12,7 +12,7 @@ function GameBoard ({onSelect}) {
             console.log(prevGameBoard)
             const updateBoard = [...prevGameBoard.map((innerArray) => [...innerArray])]
             console.log(updateBoard)
-            updateBoard[rowIndex][columnIndex] = 'X';
+            updateBoard[rowIndex][columnIndex] = activePlayer;
             return updateBoard
         } )
         onSelect()
