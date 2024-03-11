@@ -4,6 +4,9 @@ import { useState } from "react"
 function App() {
   const [activePlayer, setActivePlater] = useState('X')
 
+  function handleSelectSquere () {
+    setActivePlater((curActivePlayer) => curActivePlayer === 'X' ? 'O' : 'X' )
+  }
   return (
     <main>
       <div id="game-container">
