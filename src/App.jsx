@@ -9,7 +9,7 @@ function App() {
     setActivePlater((curActivePlayer) => curActivePlayer === 'X' ? 'O' : 'X' )
     setGameTurns((prevTurns) => {
       let currentPlayer = 'X'
-      if(currentPlayer.length > 0 && prevTurns[0].player === 'X'){
+      if(prevTurns.length > 0 && prevTurns[0].player === 'X'){
         currentPlayer = '0'
       }
       const updatedTurns = [
@@ -26,7 +26,7 @@ function App() {
           <Player name="Player 1" symbol="X" isActive={activePlayer === 'X'}/>
           <Player name="Player 2" symbol="O" isActive={activePlayer === 'O'}/>
         </ol>
-        <GameBoard onSelect={handleSelectSquare} activePlayer={activePlayer}/>
+        <GameBoard onSelect={handleSelectSquare} turns={gameTurns}/>
        </div>
     </main>
   )
