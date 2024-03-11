@@ -21,7 +21,7 @@ function GameBoard () {
          { gameBoard.map((row, rowIndex) => <li key={rowIndex}> 
              <ol>
                { row.map((playerSelect, columnIndex) => <li key={columnIndex}>
-                <button }>{playerSelect}</button> 
+                <button onClick={() => handleSelectSquere(rowIndex, columnIndex)}>{playerSelect}</button> 
                 </li> )}
             </ol>
             </li>)}
