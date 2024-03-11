@@ -1,7 +1,8 @@
 import Player from "./components/Player"
 import GameBoard from "./components/GameBoard"
+import { useState } from "react"
 function App() {
-  
+  const [activePlayer, setActivePlater] = useState('X')
 
   return (
     <main>
