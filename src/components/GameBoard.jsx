@@ -1,5 +1,5 @@
 import { useState } from "react"
-function GameBoard () {
+function GameBoard ({onSelect}) {
     const initialGameBoard = [
         [null, null, null],
         [null, null, null],
@@ -15,6 +15,7 @@ function GameBoard () {
             updateBoard[rowIndex][columnIndex] = 'X';
             return updateBoard
         } )
+        onSelect()
     }
     return(
         <ol id="game-board">
